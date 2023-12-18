@@ -1,0 +1,71 @@
+{% extends "base.html"%}
+
+{% load static%}
+
+{% block title%}Indicus Zoologica{% endblock %}
+
+{% block description%}This is my Decription{% endblock%}
+
+{% block robots%}index follow{% endblock%}
+
+{% block keywords%} journal, scientific journal {% endblock %}
+
+{% block reviewpolicyactive %}selected{% endblock  %}
+
+{% block body%}
+
+<section class="hero2" style="background-image: url('{% static "images/12225.jpg" %}');">
+    <h1 id="heading" style= "color:white;">INDICUS ZOOLOGICA</h1>
+    <h1 style="font-size: 35px;color:white;">Welcome to the International  Biosciences Platform</h1>
+    <p style="font-weight: bold;color:white;">Your source for cutting-edge research and discoveries</p>
+</section>
+
+<div id = "review_pol">
+   <h3><strong>PEER REVIEW POLICY</strong></h3>
+
+<h4><strong>Initial Evaluation/Technical Review</strong></h4>
+
+<p >The review process is an important aspect of the publication process of an article.
+It helps an editor in making decision on an article and also enables the author to improve the manuscript.
+Biolife Journal operates a double blind review process. Author(s) identity is removed from the manuscript and 
+shielded from the reviewers during the review process. The reviewer is left with only the manuscript without any 
+information that might enable him/her uncovers the identity of the author(s). Information removed includes the author(s)
+name, address/affiliation, country, phone/fax and email. Any information in the Acknowledgement and Declaration of Conflict 
+of Interest that may lead to the uncovering of the identity of the author is also removed from the manuscript prior to sending it to reviewers.</p>
+
+<h4><strong>Peer-Review</strong></h4>
+
+<p>&nbsp;</p>
+
+<p>Manuscripts are assigned to members of the editorial board of the journal or other qualified reviewers. Reviewers make one of the following recommendations:
+Accept As Is; Requires Minor Corrections; Requires Moderate Revision; Requires Major Revision; Submit To Another Publication Such As; Reject on grounds of (Please be specific).</p>
+
+<p>A Review Certificate is issued to reviewers after the review of the manuscript.</p>
+
+<p>The review reports are sent to the authors. However, reviewers&rsquo; identity is removed from the review reports. The author(s) is left with only the review
+reports/recommendation without any information that might enable him/her uncovers the identity of the reviewers. A minimum of two review reports are required per manuscript.</p>
+
+<p>On receipt of the author(s) revised manuscript, the original manuscript, the revised manuscript and the review reports are sent to the editor.
+The editor makes one of the following decisions: Accept; The Manuscript Requires Improvement; Reject.</p>
+
+<p>Only an editor has the authority to &ldquo;Accept&rdquo; or &ldquo;Reject&rdquo; a manuscript. If a manuscript is &ldquo;Accepted&rdquo;,
+an Acceptance Certificate is issued to the author(s) and the manuscripts are processed for publication.</p>
+
+<p>If a manuscript is rejected, the authors are informed of the decision and no further processing is done on the manuscript.</p>
+
+<p>If a manuscript requires improvement, it is sent to the author(s) with the editor&rsquo;s recommendation for further revision.
+The editor makes a final decision on the revised to &ldquo;Accept&rdquo; or &ldquo;Reject&rdquo; the manuscript.</p>
+
+<h4><strong>Plagiarism Policy</strong></h4>
+
+<p>This journal aims to publish original and high-quality research. By submitting a manuscript to this journal,
+the author(s) acknowledge that the study has not been previously published or submitted elsewhere for publication. 
+If any part of a published paper (whether in English or any other language) is used, proper referencing is required. 
+In cases where permission is necessary, the author(s) should obtain consent from the previous publisher or copyright holder
+, as appropriate. Manuscripts that are found (&gt;15%) to be plagiarized will not be considered for publication. In the event 
+that plagiarism is discovered in a published paper during an internal investigation, a letter will be promptly sent to all the authors, 
+their affiliated institutes, and any relevant funding agency. Furthermore, the paper will be retracted.</p>
+</div>
+
+
+{% endblock %}

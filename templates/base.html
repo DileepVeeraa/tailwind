@@ -1,0 +1,134 @@
+{% load static %}
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% block description%}{% endblock%}">
+    <meta name="robots" content="{% block robots%}{% endblock%}">
+    <meta name="keywords" content="{% block keywords%}{% endblock %}">
+    <meta name="robots" contenr="max-image-preview:large">
+    <link rel="icon" type="image/x-icon" href="{% static "images/favicon.ico"%}">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% tailwind_css %}
+    <title>{% block title%}{% endblock %}</title>
+    
+    {% block js %}{% endblock %}
+</head>
+<body class="font-sans">
+
+    <nav class="fixed w-full z-10 px-4 py-2 flex justify-between bg-yellow-50 lg:h-[100px] h-[80px]">
+		<a  href="{% url "home" %}">
+			<img class="lg:w-20 lg:mx-8 w-16 mx-6 " src="{% static "images/logo.PNG"%}"  alt="Indicus Zoologica" >
+		</a>
+		<div class="lg:hidden">
+			<button class="navbar-burger flex items-center text-blue-600 p-3">
+				<img src="{% static "images/hb2.svg"%}" class="block h-9 w-10 fill-current" >
+			</button>
+		</div>
+		<ul class="hidden absolute top-10 right-10 lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
+			<li><a class="text-base text-gray-600 font-bold hover:text-blue-600 hover:text-lg  " href="{% url "home"%}">Home</a></li>
+			<li><a class="text-base text-gray-600 font-bold hover:text-blue-600 hover:text-lg  " href="{% url "aim"%}">Aim & Scope</a></li>
+			<li><a class="text-base text-gray-600 font-bold hover:text-blue-600 hover:text-lg  " href="{% url "current"%}">Current Issue</a></li>
+			<li><a class="text-base text-gray-600 font-bold hover:text-blue-600 hover:text-lg  " href="{% url "archive"%}">Archive</a></li>
+			<li><a class="text-base text-gray-600 font-bold hover:text-blue-600 hover:text-lg  " href="{% url "reviewpolicy"%}">Review Policy</a></li>
+      		<li><a class="text-base text-gray-600 font-bold hover:text-blue-600 hover:text-lg  " href="{% url "author"%}">Author Guidelines</a></li>
+		</ul> 
+
+	</nav>
+	<div class="navbar-menu relative z-50 hidden ">
+		<div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+		<nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
+			<div class="flex items-center mb-8">
+				<a class="mr-auto text-3xl font-bold leading-none" href="{% url "home" %}">
+					<img class="w-16 mx-4 " src="{% static "images/logo.PNG"%}"  alt="Indicus Zoologica" >
+				</a>
+				<button class="navbar-close">
+
+					<img  class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" src="{% static "images/close.svg"%}" alt="">
+				</button>
+			</div>
+			<div>
+				<ul>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded" href="{% url "home" %}">Home</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded" href="{% url "aim" %}">Aim & Scope</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded" href="{% url "current" %}">Current Issue</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded" href="{% url "archive" %}">Archive</a>
+					</li>
+					<li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded" href="{% url "reviewpolicy" %}">Review Policy</a>
+					</li>
+          <li class="mb-1">
+						<a class="block p-4 text-sm font-semibold text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded" href="{% url "author" %}">Author Guidelines</a>
+					</li>
+				</ul>
+			</div>
+			<div class="mt-auto">
+
+				<p class="my-4 text-xs text-center text-gray-400">
+					<span>Copyright © 2023</span>
+				</p>
+			</div>
+		</nav>
+	</div>
+
+    {% block body%}
+    {% endblock %}  
+    <footer>
+        <p>&copy; 2023 Indicus Zoologica. All rights reserved.</p>
+    </footer>
+    <script src="{% static "index/index.js" %}"></script>
+</body>
+
+<script>
+    // Burger menus
+    document.addEventListener('DOMContentLoaded', function() {
+        // open
+        const burger = document.querySelectorAll('.navbar-burger');
+        const menu = document.querySelectorAll('.navbar-menu');
+    
+        if (burger.length && menu.length) {
+            for (var i = 0; i < burger.length; i++) {
+                burger[i].addEventListener('click', function() {
+                    for (var j = 0; j < menu.length; j++) {
+                        menu[j].classList.toggle('hidden');
+                    }
+                });
+            }
+        }
+    
+        // close
+        const close = document.querySelectorAll('.navbar-close');
+        const backdrop = document.querySelectorAll('.navbar-backdrop');
+    
+        if (close.length) {
+            for (var i = 0; i < close.length; i++) {
+                close[i].addEventListener('click', function() {
+                    for (var j = 0; j < menu.length; j++) {
+                        menu[j].classList.toggle('hidden');
+                    }
+                });
+            }
+        }
+    
+        if (backdrop.length) {
+            for (var i = 0; i < backdrop.length; i++) {
+                backdrop[i].addEventListener('click', function() {
+                    for (var j = 0; j < menu.length; j++) {
+                        menu[j].classList.toggle('hidden');
+                    }
+                });
+            }
+        }
+    });
+    </script>
+</html>
+ 

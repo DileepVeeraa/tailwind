@@ -1,0 +1,149 @@
+{% extends "base.html"%}
+
+{% load static%}
+
+{% block title%}Indicus Zoologica{% endblock %}
+
+{% block description%}INDICUS ZOOLOGICA is an International, Quarterly, peer-reviewed, online journal.{% endblock%}
+
+{% block robots%}index, follow{% endblock%}
+
+{% block keywords%} IndicusZoologica, Indicus Zoologica {% endblock %}
+
+{% block js %}
+    <meta property="og:title" content="Indicus Zoologica" />
+    <meta property="og:type" content="journal" />
+    <meta property="og:url" content="https://indicuszoologica.com" />
+    <meta property="og:image" content="https://indicuszoologica.com//static/images/favicon.ico" />
+    <meta property="og:description" content="Indicus Zoologica is an open access, online, peer reviewed international journal 
+    with a primary objective to provide research and applications related to all the Biology and Life Sciences." />
+    
+    <meta itemprop="name" content="Indicus Zoologica">
+    <meta itemprop="description" content="Indicus Zoologica is an open access, online, peer reviewed international journal
+    with a primary objective to provide research and applications related to all the Biology and Life Sciences.">
+    <meta itemprop="url" content="https://indicuszoologica.com">
+    <meta itemprop="thumbnailUrl" content="https://indicuszoologica.com//static/images/favicon.ico">
+    <meta itemprop="image" content="https://indicuszoologica.com/static/images/logo.PNG">
+    
+
+
+{% endblock %}
+
+{% block homeactive %}selected{% endblock  %}
+
+{% block body%}
+
+
+
+
+
+<div class="h-[37rem]  text-white text-center grid bg-cover bg-[url('{% static "images/12222.jpg" %}')]" style="background-image: url('{% static "images/12222.jpg" %}') ;">
+    <div class="col-start-1 row-start-1  w-full h-full">
+        <h1>Hey</h1>
+    </div>
+    <div class="col-start-1 row-start-1 mx-auto my-auto  ">
+        <h1 class="font-['Franklin Gothic Medium'] font-bold text-[58px] animate-[  0%{transform: translateY(40px); opacity: 0%;}
+        100%{transform: translateY(0px); opacity: 100%;}]">INDICUS ZOOLOGICA</h1>
+        <p class="font-['Franklin Gothic Medium'] font-bold text-[35px]">Welcome to the International  Biosciences Platform</p>
+        <p class='font-bold'>Your source for cutting-edge research and discoveries</p>
+    </div>
+</div>
+
+<section class='flex my-12 justify-between ml-12' >
+    <div class='w-[68%] bg-[#e3f0d5] shadow-[1px_1px_7px_1px_#E3E3E3] rounded-[20px]'>
+        <h2><strong>WELCOME TO INDICUS ZOOLOGICA</strong></h2>
+
+        <p >INDICUS ZOOLOGICA is an International, Triannual , peer-reviewed, online journal.<br />
+        We publish 3 Issues per year -  Febrauary, June and October.<br />
+        Indicus Zoologica is an International Biosciences Platform.</p>
+        
+        <h3><strong>Objective</strong></h3>
+
+        <p >Indicus Zoologica is an open access, online, peer reviewed international journal with a primary objective to provide research
+        and applications related to all the Biology and Life Sciences.</p>
+
+        <p>To publish the all branches of Biology and Life Sciences (Botany, Zoology, Biotechnology, Microbiology and Biochemistry).</p>                                                              
+    </div>
+    
+    <div class='bg-[#e3f0d5] shadow-[1px_1px_7px_1px_#E3E3E3] rounded-[20px]'>
+        <div >
+            <h1 class="">Latest Journal</h1>
+            <a href="{% url "current"%}" ><h4  >{{latestjournals.title}}</h4></a>
+            <a href="{% url "current"%}"><img src="{{latestjournals.cover}} " alt="Journal Cover" ></a>
+        </div>
+    </div>
+</section>
+
+<section class='flex my-12 justify-between mx-12'>
+
+    <div class='bg-[#e3f0d5] shadow-[1px_1px_7px_1px_#E3E3E3] rounded-[20px]' >
+        <div>
+            <img class='w-40' src="static/images/logo.PNG ">
+        </div> 
+
+        <div>       
+            <ul >            
+                <li><a href="{% url "mssubmit"%}" >Submit Your Manuscript</a></li>
+                <li><a href="{% static "pdf/Copy right Trasfer Form.pdf"%}" target="_blank">Copy Right Transfer Form</a></li>            
+            </ul>
+        </div>
+    </div>
+
+    <div class='bg-[#e3f0d5] shadow-[1px_1px_7px_1px_#E3E3E3] rounded-[20px]'>         
+        <div>            
+        <div >
+            <h4 >Editor-in-Chief:</h4>
+            <a href = "{% url "editorial_board" %}" >More Details</a>
+        </div>
+        
+        <p>
+            <b>Dr. Mahesh Veeraa<br />
+                Sparrow Protection and Reasearch Organisation, Jangareddigudem-534447, India<br />
+                e-mail: editor.indicus@gmail.com<br />
+            </b>
+        </p>    
+        </div>
+
+        <div>
+            <h4 >Editorial Board:</h4>
+            <p >
+            <b>Dr. Shriram Seshadri</b><br>
+            Nirama University,Ahmedabad<br>
+            
+            <b>Dr. Esteri Mamidala</b><br>
+            Kakatiya University, Warangal<br>
+            
+            <b>Dr. Potti Ravindra Babu</b><br>
+            Scientist, Provis Biolabs Pvt. Ltd, Hyderabad<br>
+            
+            <b>Dr. Suseela Lanka</b><br />
+            Krishna University,Machilipatnam<br>
+            
+            <b>Dr. V. Ramarao</b><br>
+            Central Ayurveda Reaserch Center, Banglore<br>
+            <br />
+        </p>
+        </div>
+    </div>
+
+    <div class='bg-[#e3f0d5] shadow-[1px_1px_7px_1px_#E3E3E3] rounded-[20px]' >
+
+
+    <h5>Publisher :</h5>
+    <p>
+        <b>SPARO Publications</b> <br /><br />
+        <b>Address:</b><br/>
+        D No: 11-2-83/2<br />
+        Ayyanna Nilayam, Ayyanna Colony<br/>
+        Jangareddigudem-534447,<br/>
+        Andhra Pradesh, India<br /><br />
+        <b>Contact details:</b> <br />editor.indicus@gmail.com;
+        <br /><br /><br />
+        <b>Phone:</b><br /> +91 94411 49933<br />
+    </p>
+
+    </div>
+</section>
+
+
+{% endblock %} 

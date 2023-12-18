@@ -1,0 +1,58 @@
+{% extends "base.html"%}
+
+{% load static%}
+
+{% block title%}Indicus Zoologica{% endblock %}
+
+{% block description%}This is my Decription{% endblock%}
+
+{% block robots%}index follow{% endblock%}
+
+{% block keywords%} journal, scientific journal {% endblock %}
+
+{% block currentactive %}selected{% endblock  %}
+
+{% block body%}
+
+
+<section class="hero3" style="background-image: url('{% static "images/12224.jpg" %}');">
+    <h1 id="heading">INDICUS ZOOLOGICA</h1>
+    <h1 style="font-size: 35px;">Welcome to the International  Biosciences Platform</h1>
+    <p style="font-weight: bold;">Your source for cutting-edge research and discoveries</p>
+</section>
+
+<section id="jrn_issue">
+
+    <div >
+        <p style="font-weight: bold; font-size: 26px;">{{archive.issue_title}}<br><br> </p>
+        <p>{{archive.issue_summary}}<br><br></p>
+        <p style="color: grey;font-weight: bold; font-size: 18px;">PUBLISHED: <a href="" style="color: black;">{{archive.published}}</a> <br><br><br><br><br></p>
+    </div>
+    <div style="display: inline; justify-content: space-between;">
+        <div style="display:flex;justify-content:space-between;">
+            <h3 style="color:gray ;">TITLE OF THE PUBLICATION & AUTHORS <br><br><br></h3>
+            <h3 style="color:gray ;">PAGE NUMBER<br><br><br></h3>
+        </div>
+   {%for issue in issues%}
+        <section style="display:flex;justify-content:space-between;margin-top: 20px;margin-bottom: 40px;;">
+            <div>
+                <div style="width: 780px;">
+                    <a href="{{issue.pdf}}"><h3 style="color: rgb(156, 65, 65); font-size: 16px;">{{issue.article_title}} <br><br></h3></a> 
+                    <p>{{issue.article_authors}}<br><br> </p>         
+                </div>
+                <div id="issue_button">
+                    <a href="{{issue.pdf}}" target="_blank">PDF</a>
+                    <a  href="{{issue.pdf}}" download="{{issue.pdf}}">DOWNLOAD PDF</a>
+                </div>
+                <!---<p style="margin-top:10px;"><strong>DOI: </strong>{{issue.doi}}</p>--->
+            </div>
+            
+            <div style="    margin-right: 55px;">
+                <p style="color:gray; font-weight:bold;">{{issue.pages}}</p>
+            </div>
+        </section>
+    {% endfor %}
+    </div>
+</section>
+
+{% endblock %}

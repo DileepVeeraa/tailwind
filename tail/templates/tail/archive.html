@@ -1,0 +1,27 @@
+{% extends "base.html"%}
+
+{% load static%}
+
+{% block title%}Indicus Zoologica{% endblock %}
+
+{% block description%}This is my Decription{% endblock%}
+
+{% block robots%}index follow{% endblock%}
+
+{% block keywords%} journal, scientific journal {% endblock %}
+
+{% block archiveactive %}selected{% endblock  %}
+
+{% block body%}
+
+<div id="jrn_index">
+    <h1 id="arc_head">Archive</h1>
+    
+    {% for archive  in archives %}
+    <a href="archive/{{archive.slug}}"><h5 style = "margin-left: 33px;">{{archive.title}}</h5></a>
+    <a href="{% url "current"%}"><img src="{% static "images/IMG-20230624-WA0000.jpg" %} " alt="Journal Cover"  style="width: 200px;border-radius: 10px; "></a>
+    {% endfor %}
+    
+</div>
+
+{% endblock %}

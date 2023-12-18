@@ -1,0 +1,127 @@
+{% extends "base.html"%}
+
+{% load static%}
+
+{% block title%}Indicus Zoologica{% endblock %}
+
+{% block description%}This is my Decription{% endblock%}
+
+{% block robots%}index follow{% endblock%}
+
+{% block keywords%} journal, scientific journal {% endblock %}
+
+{% block authoractive %}selected{% endblock  %}
+
+{% block body%}
+
+
+<section class="hero2" style="background-image: url('{% static "images/12226.jpg" %}');">
+    <h1 id="heading" style="color:white;">INDICUS ZOOLOGICA</h1>
+    <h1 style="font-size: 35px;color:white;">Welcome to the International  Biosciences Platform</h1>
+    <p style="font-weight: bold;color:white;">Your source for cutting-edge research and discoveries</p>
+</section>
+
+<div id = "auth_inst">
+    <h1>INSTRUCTIONS FOR AUTHORS</h1>
+    <p style="font-size: 20px;"><br><br>
+        The international journal, Indicus Zoologica accepts all research manuscripts from the field of Biology including
+        <b>Zoology, Ornithology, Entomology, Microbiology, Biochemistry</b>, and <b>Biotechnology</b>
+        for publication from all over the world. <b>The manuscripts are published under Open Access Article, published by
+        SPARO (Sparrow Protection and Research Organization) publications.</b> Please go through the “Guide for Authors” 
+        before making a submission. Prepare the manuscript according to the instructions. <br> <br>
+            
+        • Do not submit manuscript any manuscript which is under consideration or peer review or accepted
+         for publication or in press or published elsewhere. <br>	
+        • The manuscript must be your own original work, and not to be a duplicate any other published work
+         (including your own previously published work). <br>
+        • Make sure that your manuscript must be free from plagiarism before submission. <br><br>	
+        
+        Author(s), should submit their declaration in their covering letter to the Editor, that the manuscript 
+        (title to be mentioned) whether the manuscript to be considered as a ‘Research Paper’ or ‘Review Article’
+        and also confirm that the manuscript has not been submitted to any other Journal for publication. Authors
+        publishing results from in field experiments connecting to animals or birds or humans should state in the Materials
+        and Methods section whether the permission for conducting of such experiments was obtained from the relevant authorities
+        or ethics committees of their Institution.	<br>
+        At the time of submitting the manuscript the corresponding author must provide name, address and e-mail ID of
+        three potential reviewers related with the subject of the manuscript. <br><br>
+        <b>Manuscript submission information:</b> <br><br>
+        <b>1. General guidelines</b> <br><br>
+        Manuscripts must be prepared in English using only MS Word, on A4 size with Times New Roman font, size 12, double spaced. 
+        Content of the manuscript should follow the order: Title page including title (Font-14) of the manuscript followed by names 
+        of all authors and their affiliation); Abstract (250 words); Keywords; Introduction; Material and Methods; Results; Discussion;
+        Conclusion; Acknowledgments; References. <br><br>            
+        Tables and figures must be after the references. Caption of Tables and figures are must be as listed in the text. <br><br>
+        <b>2. Submission of manuscript</b><br><br>
+        All manuscripts should be sent to the editorial office through e-mail: editor.indicus@gmail.com or you can submit by clicking 
+        <a href= "{%url "mssubmit"%}" style="color:#0066ff;font-weight: 200;"> here</a><br><br>
+        <b>3. Editorial Policy</b><br><br>
+        The submitted manuscripts will be initially assessed by the Editor-in-Chief or members of Editorial Board for suitability for
+        publication in Indicus Zoologica. If the manuscript found suitable, the prior decision of acceptance shall be intimated to author
+        within 10 days after the submission. Then it will be sent to first reviewer, once the corrections done by the author(s) guided by 
+        first reviewer, then the manuscript send to second reviewer. It takes about one to two months. The Editor-in-Chief is responsible 
+        for the final decision regarding acceptance or rejection of submitted manuscripts. <br><br>
+        <b>4. Ethical Guidelines</b><br><br>
+        Authors performing experiments on animals, are required to provide a statement in materials and methods section that their study
+        organisms were cared for in accordance with the guidelines approved by the appropriate Ethical Committee at the institution,
+        where the experiments were carried out. <u>Manuscripts dealing with unwarranted numbers of rare or endangered species and human 
+        subjects may not be accepted</u>. <br><br>
+        <b>5. Anti-Plagiarism Policy</b><br><br>
+        Plagiarism involves presenting someone else's work (copying of phrases, clauses, sentences, paragraphs or longer extracts from
+        published or unpublished work) as one's own particular work. Self-plagiarism sometimes occurs when an author reuses some parts
+        of his/ her own published work without mentioning the appropriate sources OR submit an identical paper published earlier by 
+        adding small amounts of new data. <br><br>           
+        Indicus Zoologica strictly opposes the plagiarism and insists the authors to submit a statement that they are aware of the
+        plagiarism policy of the journal and no part of their submitted manuscript/article are copied in any form and it is their original research.            
+        After all precautions if plagiarism comes to knowledge of Indicus Zoologica, an investigation would be initiated and the journal will inform
+        the author's institute for the misconduct done by the authors. <br><br>
+        <b>6. Conflict of Interests</b><br><br>
+        Indicus Zoologica requests authors to disclose any conflict of interest. If the authors have no conflict of interest to declare, corresponding
+        author may state this to the Editor-in-Chief at the time of submission of the manuscript. <br><br>
+        <b>7. Reference Style Guidelines</b><br><br>
+        References should be cited in the text as: for one author- Veera 2023; for two authors - Veera and Mahesh 2023; for more than two authors-
+        Veera et al. 2023 in text & (Veera et al. 2023) in citation.	<br><br>
+        
+        All the cited References should be arranged in alphabetical order in reference section. The references must be in  APA style, as below: <br><br>
+        For Journal Reference: <br><br>
+        <b>For One Author:</b> <br><br>
+        Veerá M. N. (2022). Successive re-enforcement of House Sparrow (Passer domesticus) at a remote village: Mupparthipadu, Andhra Pradesh, India.
+        Indian Journal of Applied and Pure Biology, 37(2): 449-458. <br><br>
+        
+        <b>For Two Authors:</b><br><br>
+        Mahesh, N. V. and Suseela, L.  (2021). Protective Nest Design for Indian House Sparrow Passer domesticus, with reference to predation and reuse.
+        Agricultural Science Digest, 43(1): 105-112. [doi.10.18805/ag.D-5438]. <br><br>
+        
+        <b>For Multiple Authors:</b> <br><br>
+        Veerá M. N., Ramarao, V., and Suseela, L. (2022). “Avian diversity of Jangareddigudem town, Andhra Pradesh, India, concerning to their threats”,
+        Indian Journal of Applied and Pure Biology, 37(1): 71-79. <br><br>
+        <b>For Book Reference</b> <br><br>
+        Ali, Sálim (1996). The book of Indian Birds. (12th Edition), Bombay Natural History Society, Oxford Press, Mumbai. <br><br>
+        
+        <b>For the Reference from Book Chapter</b>
+        Veerá M.N. and Suseela Lanka.  (2021). Global scenario and Conservation Status of House Sparrow (Passer domesticus), in book: Food and Agriculture,
+        ESN Publications: 528-549. <br><br>
+        <b>For Online article</b><br><br>
+        For online articles, the number of the article and Digital Object Identifier (DOI) must be provided at end of the reference. <br><br>
+        <b>8. Figures and Tables</b><br><br>
+        Clear or focused images or Illustrations must be with 300 dpi to be submitted at the time of the galley proof, which to be attached individual JPEG files.
+        All attached the Illustrations should have the number and caption as the file name. The figures to be numbered in Arabic numerals and cited in the text
+        and at caption as Fig. 1, Fig. 2 and so on at. There is no charges for color figures. <br><br>
+        <b>9. Publication charges</b> <br><br>
+        There are no submission, processing charges and publication fee. All manuscripts are processed at free of cost.
+        Every peer-reviewed research article published in Indicus Zoologica will be published open access. This means that the article is freely and universally
+        accessible online in an easily readable format immediately after publication. The author does not have to pay charges for open access.	<br><br>
+        
+        Publishing on Indicus Zoologica is free of cost. <br><br>
+        <b>10. Author Withdrawal Policy</b><br><br>
+        Requests for withdrawal of manuscript after submission within 24 hours by corresponding author could be accepted. After acceptance of the manuscript for publication
+        the withdrawal is not permitted. <br><br>
+        <b>11. Galley Proofs</b> <br><br>
+        Galley proofs would be sent to the corresponding author and it is responsibility of the corresponding author to return the corrected galley proof within 72 hours.
+        The authors are responsible for the contents appeared in their published manuscripts.br <br><br>
+        <b>12. Copy Right Form:</b><br><br>
+        Copy Right form should be signed necessarily at the time of publication of manuscript. The form will be provided in the acceptance e-mail. <br><br>
+        </p>
+</div>
+
+
+{% endblock %}

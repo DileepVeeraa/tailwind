@@ -1,0 +1,49 @@
+{% extends "base.html"%}
+
+{% load static%}
+
+{% block title%}Indicus Zoologica{% endblock %}
+
+{% block description%}This is my Decription{% endblock%}
+
+{% block robots%}index follow{% endblock%}
+
+{% block keywords%} journal, scientific journal {% endblock %}
+
+{% block body%}
+
+<section >
+   
+    <div class="contact">
+        <h2>Submit Your Manuscript <br><br><br></h2>
+    
+        {% if messages %}
+            {% for message in messages  %}
+                <h3 style="color:green;text-align: center;margin: 0 0 54px 0;">{{message}}</h3>
+            {% endfor %}
+        {% endif %}
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+    
+            {% for field in form %}
+                {{field.label_tag}}
+    
+                {% for error in field.errors %}
+                    <p style="color:red; font-weight:600;padding: 2px 0 0 9px; ">{{error}}</p>
+                {% endfor %}
+    
+                {{field}}
+    
+    
+                {% if field.help_text %}
+                    <a style="color: #5762d5; font-weight:500;padding: 2px 0 0 9px;">{{field.help_text}}</a> <br><br>
+                {% endif %}
+            {% endfor %}
+    
+            <button  type="submit">Submit</button>
+        </form>
+    </div>
+</section>
+
+
+{% endblock %}
